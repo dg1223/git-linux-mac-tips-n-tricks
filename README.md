@@ -59,8 +59,7 @@ Bundling all three together is a more involved task and takes away your freedom 
 
 To do this, open your .bashrc file (if you are using Linux) or its equivalent and add the following function. Although you can use Vim (the default VI editor) to edit the file in your terminal, which many Linux pros do, as a millenial, I hate using it most of the time. It's old and cumbersome. I do it the easy way.
   
-  - Open the terminal and make a visible copy of the hidden **.bashrc** file: <code>cp ~/.bashrc ~/bashrc</code>
-  - Now, open the copied **bashrc** file in your favourite text editor.
+  - Open the terminal (<code>Ctrl + Alt + T</code>) and open the **.bashrc** file for editing with: <code>gedit ~/.bashrc</code>
   - Add the following function at the end of the file:
   
         function gitpush() {
@@ -68,10 +67,8 @@ To do this, open your .bashrc file (if you are using Linux) or its equivalent an
             git commit -a -m "$1"
             git push
         }
-  - Save the file
-  - In the terminal, run the following command: <code>cp ~/bashrc ~/.bashrc</code>
-  - Now, run this command in the terminal where you are going to do the git push (can be the same terminal): <code>source ~/.bashrc</code>
-  - **Optional (be careful!!)**: If you want, you can delete the copy of the bashrc file: <code>rm -rf ~/bashrc </code>
+  - Save the file (<code>Ctrl + S</code>)
+  - Run this command in the terminal: <code>source ~/.bashrc</code>
 
 Now you can push your code to your remote repository with this single command: <code>gitpush "your commit message"</code>
   
