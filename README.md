@@ -59,7 +59,8 @@ Bundling all three together is a more involved task and takes away your freedom 
 
 To do this, open your .bashrc file (if you are using Linux) or its equivalent and add the following function. Although you can use Vim (the default VI editor) to edit the file in your terminal, which many Linux pros do, as a millenial, I hate using it most of the time. It's old and cumbersome. I do it the easy way.
   
-  - Open the terminal (<code>Ctrl + Alt + T</code>) and open the **.bashrc** file for editing with: <code>gedit ~/.bashrc</code>
+  - Open the terminal (<code>Ctrl + Alt + T</code>)
+  - Open the **.bashrc** file for editing with: <code>gedit ~/.bashrc</code>
   - Add the following function at the end of the file:
   
         function gitpush() {
@@ -73,4 +74,25 @@ To do this, open your .bashrc file (if you are using Linux) or its equivalent an
 Now you can push your code to your remote repository with this single command: <code>gitpush "your commit message"</code>
   
 ### Source
-[git add, commit and push commands in one?](https://stackoverflow.com/a/23328996)
+[git add, commit and push commands in one?](https://stackoverflow.com/a/23328996) <br><br>
+
+# 4. Shorten the current directory path shown on terminal
+   
+When you are deep into a directory structure that has many folders, your terminal may show your current directory path like this:
+   
+<code>shamir@dg:~/Documents/Software/php-app$</code>
+
+It makes running long commands a messy situation, especially when you have the terminal window downsized for convenience. To shorten the path name so that the terminal only shows your current directory, you can do the following:
+   
+  - Open the terminal (<code>Ctrl + Alt + T</code>)
+  - Open the **.bashrc** file for editing with: <code>gedit ~/.bashrc</code>
+  - Add the following line at the end of the file: <code>PS1="\u@\h: \W:\$"</code>
+  - Save the file (<code>Ctrl + S</code>)
+  - Run this command in the terminal: <code>source ~/.bashrc</code>
+
+Now the path name should look like this:
+   
+<code>shamir@dg: php-app:$</code>
+   
+### Source
+[How do I shorten the current directory path shown on terminal?](https://unix.stackexchange.com/questions/381113/how-do-i-shorten-the-current-directory-path-shown-on-terminal)
