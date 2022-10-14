@@ -96,3 +96,9 @@ Now the path name should look like this:
    
 ### Source
 [How do I shorten the current directory path shown on terminal?](https://unix.stackexchange.com/questions/381113/how-do-i-shorten-the-current-directory-path-shown-on-terminal)
+
+
+# 5. Enable remote connection to MariaDB
+
+If MariaDB connector does not work, use the MySQL connector.
+
