@@ -106,31 +106,40 @@ If MariaDB connector does not work, use the MySQL connector.
 This is mainly for AWS Cloud9 IDE because it only provides Ubuntu 18.04.
 
 Add the deadsnakes repository.
+   
 <code>sudo add-apt-repository ppa:deadsnakes/ppa</code>
 <code>sudo apt-get update</code>
 
 Install Python 3.9
+   
 <code>sudo apt-get install python3.9</code>
 
 Check installed Python versions (optional)
+   
 <code>ls /usr/bin/python3.*</code>
 
 Tell Ubuntu that it can now use either of the installed Python 3 versions. Option 1: Python 3.6; option 2: Python 3.9
+   
 <code>sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1</code>
 <code>sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 2</code>
 
 Set Python 3.9 as primary Python 3 version. Enter the option number (probably #2) to set Python 3.9 as default.
+   
 <code>sudo update-alternatives --config python3</code>
 
 Check default Python 3 version
+   
 <code>python3 --version</code>
 
 The regular Python version still probably points to Python 2.x
+   
 <code>python --version</code>
 
 If so, you can uset Python 2.x from being default for anything (optional)
+   
 <code>sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.9 1</code>
 
 Now, everything should point to Python 3.9
+   
 <code>python --version</code>
 <code>python3 --version</code>
