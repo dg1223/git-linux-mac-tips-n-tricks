@@ -105,7 +105,7 @@ If MariaDB connector does not work, use the MySQL connector.
 # 6. Upgrade to Python 3.9 on Ubuntu 18.04 LTS
 This is mainly for AWS Cloud9 IDE because it only provides Ubuntu 18.04.
 
-Add the deadsnakes repository.
+Add the deadsnakes repository
    
 <code>sudo add-apt-repository ppa:deadsnakes/ppa</code>
 
