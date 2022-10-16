@@ -170,6 +170,14 @@ For example,
 If you have more than one package installed, you can also do this. Keep the braces this time.
    
 <code>sudo ln -s apt_pkg.cpython-{36m, 37m}-x86_64-linux-gnu.so apt_pkg.so</code>
+
+You may also have to install the distutils package for Python 3.9
+
+<code>sudo apt install python3.9-distutil</code>
+
+Check if its installed correctly. You should see no traceback calls
+
+<code>python3 -c "from distutils import sysconfig"</code>
    
    
 ### Sources
@@ -179,4 +187,4 @@ If you have more than one package installed, you can also do this. Keep the brac
 
 [python-dev installation error: ImportError: No module named apt_pkg](https://stackoverflow.com/questions/13708180/python-dev-installation-error-importerror-no-module-named-apt-pkg)
 
-
+[ImportError: cannot import name 'sysconfig' from 'distutils' ](https://askubuntu.com/questions/1292972/importerror-cannot-import-name-sysconfig-from-distutils-usr-lib-python3-9)
