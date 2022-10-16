@@ -146,10 +146,37 @@ Now, everything should point to Python 3.9
 <code>python --version</code>
 
 <code>python3 --version</code>
+   
+You may have to reinstall the apt package manager so that it correctly points to Python 3.9
+   
+<code>sudo apt-get install python3-apt --reinstall</code>
+   
+Recreate symbolic link to the apt package
+   
+<code>cd /usr/lib/python3/dist-packages</code>
 
+Check which apt_pkg.cpython-{version_number} your system has
+   
+<code>ls apt_pkg.cpython-*</code>
+   
+Link to this package file by replacing {your-version-number}, including replacing the braces, with your installed version number
+   
+<code>sudo ln -s apt_pkg.cpython-{your-version-number}-x86_64-linux-gnu.so apt_pkg.so</code>
+
+For example,
+   
+<code>sudo ln -s apt_pkg.cpython-36m-x86_64-linux-gnu.so apt_pkg.so</code>
+   
+If you have more than one package installed, you can also do this. Keep the braces this time.
+   
+<code>sudo ln -s apt_pkg.cpython-{36m, 37m}-x86_64-linux-gnu.so apt_pkg.so</code>
+   
+   
 ### Sources
 [How to upgrade to Python 3.9.0 on Ubuntu 18.04 LTS](https://www.itsupportwale.com/blog/how-to-upgrade-to-python-3-9-0-on-ubuntu-18-04-lts)
 
 [Change the Python3 default Version in Ubuntu](https://dev.to/meetsohail/change-the-python3-default-version-in-ubuntu-1ekb)
+
+[python-dev installation error: ImportError: No module named apt_pkg](https://stackoverflow.com/questions/13708180/python-dev-installation-error-importerror-no-module-named-apt-pkg)
 
 
