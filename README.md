@@ -108,6 +108,7 @@ This is mainly for AWS Cloud9 IDE because it only provides Ubuntu 18.04.
 Add the deadsnakes repository.
    
 <code>sudo add-apt-repository ppa:deadsnakes/ppa</code>
+
 <code>sudo apt-get update</code>
 
 Install Python 3.9
@@ -121,6 +122,7 @@ Check installed Python versions (optional)
 Tell Ubuntu that it can now use either of the installed Python 3 versions. Option 1: Python 3.6; option 2: Python 3.9
    
 <code>sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1</code>
+
 <code>sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 2</code>
 
 Set Python 3.9 as primary Python 3 version. Enter the option number (probably #2) to set Python 3.9 as default.
@@ -142,4 +144,12 @@ If so, you can uset Python 2.x from being default for anything (optional)
 Now, everything should point to Python 3.9
    
 <code>python --version</code>
+
 <code>python3 --version</code>
+
+### Sources
+[How to upgrade to Python 3.9.0 on Ubuntu 18.04 LTS](https://www.itsupportwale.com/blog/how-to-upgrade-to-python-3-9-0-on-ubuntu-18-04-lts)
+
+[Change the Python3 default Version in Ubuntu](https://dev.to/meetsohail/change-the-python3-default-version-in-ubuntu-1ekb)
+
+
