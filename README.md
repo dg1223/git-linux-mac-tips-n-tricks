@@ -188,3 +188,8 @@ Check if its installed correctly. You should see no traceback calls
 [python-dev installation error: ImportError: No module named apt_pkg](https://stackoverflow.com/questions/13708180/python-dev-installation-error-importerror-no-module-named-apt-pkg)
 
 [ImportError: cannot import name 'sysconfig' from 'distutils' ](https://askubuntu.com/questions/1292972/importerror-cannot-import-name-sysconfig-from-distutils-usr-lib-python3-9)
+
+# 7. Update tailwind.config.css file to enable TailwindCSS CLI
+In <code>module.exports</code>, content should be <code>content: ["*"],</code>
+
+You can replace the <code>*</code> with more granular file paths but do not use the default code from Tailwind's installation instructions.
