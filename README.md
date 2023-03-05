@@ -193,3 +193,14 @@ Check if its installed correctly. You should see no traceback calls
 In <code>module.exports</code>, content should be <code>content: ["*"],</code>
 
 You can replace the <code>*</code> with more granular file paths but do not use the default code from Tailwind's installation instructions.
+
+# 8. Change origin for a newly initialized local Git repository to a new remote GitHub repository
+Everything from <code>git init</code> to <code>git push -u origin main</code> remains the same except for the following line:
+
+<code>git remote set-url origin git@github.com:[your_github_account_name]/[your_github_repo_name].git</code>
+
+For the URL, copy the SSH URL of the Git remote repository.
+
+
+### Sources
+[How to Change Git Remote Origin(URL)](https://linuxhint.com/change-git-remote-origin-url)
