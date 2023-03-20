@@ -204,3 +204,7 @@ For the URL, copy the SSH URL of the Git remote repository.
 
 ### Sources
 [How to Change Git Remote Origin(URL)](https://linuxhint.com/change-git-remote-origin-url)
+
+# 9. Set your GitHub credentials for VSCode from Linux terminal
+
+In the command line, enter <code>gh auth login</code>, then follow the prompts. 
