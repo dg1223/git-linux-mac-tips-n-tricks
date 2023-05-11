@@ -75,8 +75,29 @@ Now you can push your code to your remote repository with this single command: <
   
 ### Source
 [git add, commit and push commands in one?](https://stackoverflow.com/a/23328996) <br><br>
+ 
+# 4. Convert local directory to a Git repo and link it to a remote GitHub repo
 
-# 4. Shorten the current directory path shown on terminal
+For this to work, your remote GitHub reposity **MUST** have the same name as your current local directory.
+
+Add the following function to your .bashrc file in the same way as [#3](https://github.com/dg1223/tips-n-tricks/edit/main/README.md#3-push-code-with-a-single-command) above:
+   ```
+   function gitremote() {
+    dirName=$(basename "$(pwd)")
+    echo "# ${dirName}" >> README.md
+    git init
+    git add .
+    git commit -a -m "initial commit"
+    git branch -M main
+    git remote add origin https://github.com/[your-github-username]/${dirName}.git
+    git push -u origin main
+}
+```
+Replace [your-github-username] (including the square brackets) with your GitHub username. This will create a README.md file in your current directory, initialize the directory as a Git repository and push everything to your remote GitHub repository that has the same name as your current directory.
+   
+Note that this code does not create a .gitignore file.
+
+# 5. Shorten the current directory path shown on terminal
    
 When you are deep into a directory structure that has many folders, your terminal may show your current directory path like this:
    
@@ -98,11 +119,11 @@ Now the path name should look like this:
 [How do I shorten the current directory path shown on terminal?](https://unix.stackexchange.com/questions/381113/how-do-i-shorten-the-current-directory-path-shown-on-terminal)
 
 
-# 5. Enable remote connection to MariaDB
+# 6. Enable remote connection to MariaDB
 
 If MariaDB connector does not work, use the MySQL connector.
 
-# 6. Upgrade to Python 3.9 on Ubuntu 18.04 LTS
+# 7. Upgrade to Python 3.9 on Ubuntu 18.04 LTS
 This is mainly for AWS Cloud9 IDE because it only provides Ubuntu 18.04.
 
 Add the deadsnakes repository
@@ -189,12 +210,12 @@ Check if its installed correctly. You should see no traceback calls
 
 [ImportError: cannot import name 'sysconfig' from 'distutils' ](https://askubuntu.com/questions/1292972/importerror-cannot-import-name-sysconfig-from-distutils-usr-lib-python3-9)
 
-# 7. Update tailwind.config.css file to enable TailwindCSS CLI
+# 8. Update tailwind.config.css file to enable TailwindCSS CLI
 In <code>module.exports</code>, content should be <code>content: ["*"],</code>
 
 You can replace the <code>*</code> with more granular file paths but do not use the default code from Tailwind's installation instructions.
 
-# 8. Change origin for a newly initialized local Git repository to a new remote GitHub repository
+# 9. Change origin for a newly initialized local Git repository to a new remote GitHub repository
 Everything from <code>git init</code> to <code>git push -u origin main</code> remains the same except for the following line:
 
 <code>git remote set-url origin git@github.com:[your_github_account_name]/[your_github_repo_name].git</code>
@@ -205,6 +226,6 @@ For the URL, copy the SSH URL of the Git remote repository.
 ### Sources
 [How to Change Git Remote Origin(URL)](https://linuxhint.com/change-git-remote-origin-url)
 
-# 9. Set your GitHub credentials for VSCode from Linux terminal
+# 10. Set your GitHub credentials for VSCode from Linux terminal
 
 In the command line, enter <code>gh auth login</code>, then follow the prompts. 
