@@ -1,7 +1,4 @@
-# Intro
-If you are new to Git or have not had to use Git too much before but now your dev world is getting heated up, this guide is for you. It's a collection of Git-related tips and tricks (some Linux tricks as well) that helped me to significantly cut down the time spent on executing repetitive Git operations on a daily basis. My original intention was to create a repository for myself and only jot down rough notes so that I can come back to these tips-n-tricks whenever I need to. However, I think writing these down in a documentation format will not only benefit me but also other people who are on the same boat as I am.
-
-If the notes below have helped you in any way, please give this repo a star :) <br><br>
+These are some tricks and shortcuts that I use in everyday coding to automate some repetitive tasks and make my dev life easier. If the tips below have helped you in any way, please give this repo a star :) <br><br>
 
 # 1. How to change your git commit history
 https://stackoverflow.com/questions/3042437/how-to-change-the-commit-author-for-one-specific-commit/3042512#30425120 <br><br>
