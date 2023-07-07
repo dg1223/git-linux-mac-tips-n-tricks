@@ -40,9 +40,9 @@ Now, whenever you do <code>git push</code>, you won't have to enter your GitHub 
   
 # 3. Push code with a single command
   
-The usual way to push your code to a remote Git repository is to follow the **git add-commit-push** cycle. But that's three commands. You can reduce this repetitive task to two or even a single command.
+The usual way to push your code to a remote branch of a Git repository is to follow the **git add-commit-push** cycle. But that's three commands. You can reduce this task to a single command.
 
-[ **JUMP below if you 'just want the single command'** ]
+[ **JUMP below if you 'just want the command'** ]
 
   
 If you want to bundle add and commit only for more control over the commit command, you can just add this simple alias to your git config file by running this command in the terminal inside your local git repository:
@@ -59,16 +59,20 @@ To do this, open your .bashrc file (if you are using Linux) or its equivalent an
   - Open the terminal (<code>Ctrl + Alt + T</code>)
   - Open the **.bashrc** file for editing with: <code>gedit ~/.bashrc</code>
   - Add the following function at the end of the file:
-  
-        function gitpush() {
-            git add .
-            git commit -a -m "$1"
-            git push
-        }
+    
+     ```
+     function gitpush() {
+       branch="$1"  # Assign the first argument to the branch variable
+       shift # Shift the argument list to remove the branch argument
+       git add .
+       git commit -a -m "$*" # Use remaining arguments as the commit message
+       git push origin "$branch"  # Use the branch variable for git push
+      }
+
   - Save the file (<code>Ctrl + S</code>)
   - Run this command in the terminal: <code>source ~/.bashrc</code>
 
-Now you can push your code to your remote repository with this single command: <code>gitpush "your commit message"</code>
+Now you can push your code to your remote repository with this single command: <code>gitpush branch_name "commit message"</code>
   
 ### Source
 [git add, commit and push commands in one?](https://stackoverflow.com/a/23328996) <br><br>
