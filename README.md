@@ -230,3 +230,6 @@ For the URL, copy the SSH URL of the Git remote repository.
 # 10. Set your GitHub credentials for VSCode from Linux terminal
 
 In the command line, enter <code>gh auth login</code>, then follow the prompts. 
+
+# 11. How to Run PySpark on Jupyter Notebook
+[INSTRUCTIONS](https://phoenixnap.com/kb/jupyter-pyspark)
